@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!--th:fragment="name"은 해당 태그로 선언된 태그 내부가 템플릿이 되며 속성명이
+        템플릿 조각이름이 된다. 헤딩 템플릿 조각을 사용하고 싶은 다른 영역에서 해당 이름
+        을 사용해 템플릿을 가져올 수 있다.-->
+        
+        <!--파라미터도 전달을 해 줄 수 있다. fragment 속성명에 (param1, param2)처럼
+        파라미터를넣어줄 수 있는데, 이 파라미터는 템플릿 조각 내에서 사용할 수 있다. 
+        사용법은 기존에 사용하던 attribute와 동일하다.-->
+<footer th:fragment="copy"> 푸터 자리 입니다.
+</footer>
+<footer th:fragment="copyParam (param1, param2)">
+    <p>파라미터 자리 입니다.</p>
+    <p th:text="${param1}"></p>
+    <p th:text="${param2}"></p>
+</footer>
+</body>
+</html>

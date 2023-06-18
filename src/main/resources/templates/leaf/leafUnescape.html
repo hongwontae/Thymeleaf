@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>컨텐츠 데이터 출력하기</h1>
+    <!-- <ul>
+      <li>th:text 사용<span th:text="${data}"></span></li>
+      <li>컨텐츠 안에서 직접 출력하기 = [[${data}]]</li>
+    </ul> -->
+      <!-- 타임리프는 기본적으로 escape해서 모든 문자열을 아스키로 바꾸는데
+            모델에 태그명을 넣어서 보내면 아스키 코드로 변환돼서 역할을 하지 못한다. -->
+
+            <h1>text vs utext</h1>
+            <ul>
+              <li>th:text 사용<span th:text="${data}"></span></li>
+              <li>th:utext 사용<span th:utext="${data}"></span></li>
+            </ul>
+            <h1><span th:inline="none">[[...]] vs [(...)]</span> </h1>
+            <ul>
+                <li><span th:inline="none">[[...]] = </span>[[${data}]] </li>
+                <li><span th:inline="none">[(...)] = </span>[(${data})] </li>
+            </ul>
+
+    
+</body>
+</html>
